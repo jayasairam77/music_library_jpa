@@ -22,7 +22,7 @@ public class Song {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "songid")
-    private int id;
+    private int songId;
     @Column(name = "songname")
     private String songName;
     @Column(name = "lyricist")
@@ -35,20 +35,20 @@ public class Song {
     public Song() {
     }
 
-    public Song(int id, String songName, String lyricist, String singer, String musicDirector) {
-        this.id = id;
+    public Song(int songId, String songName, String lyricist, String singer, String musicDirector) {
+        this.songId = songId;
         this.songName = songName;
         this.lyricist = lyricist;
         this.singer = singer;
         this.musicDirector = musicDirector;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public void setsongId(int songId) {
+        this.songId = songId;
     }
 
-    public int getId() {
-        return this.id;
+    public int getsongId() {
+        return this.songId;
     }
 
     public void setSongName(String songName) {
